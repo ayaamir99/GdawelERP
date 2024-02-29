@@ -17,6 +17,7 @@ public class D02_LoginStepDef {
     public void validEmailAndPassword(){
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.navigate().to("https://gdawel.app/login");
+        ///
 
     }
     @And("user enter valid email{string} and valid password{string}")
