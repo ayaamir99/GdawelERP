@@ -10,28 +10,24 @@ import java.time.Duration;
 
 import static org.example.StepDefinition.Hooks.driver;
 
-public class D02_LoginStepDef {
-    P02_LoginPage login=new P02_LoginPage();
-    //     Given I am on the login page
-    @And("user enter valid email{string} and valid password{string}")
-    public void validEmailAndPassword(){
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-
-    }
-    @And("user enter valid email{string} and valid password{string}")
-    public void validEmailAndPassword(String email,String password){
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        login.sendKeys(login.EmailLoginButton(),"detebag627@elixirsd.com");
-        login.sendKeys(login.passwordLoginButton(),""+74108520);
-        login.click(login.loginButton());
-
-    }
-
+public class D04_PurchaseInvoiceStepDef {
+//    P02_LoginPage login=new P02_LoginPage();
+//
+//    @And("user enter valid email{string} and valid password{string}")
+//    public void validEmailAndPassword(String email,String password){
+//        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+//        try {
+//            Thread.sleep(2000);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
+//        login.sendKeys(register.emailField(),email);
+//        login.click(register.continueButton());
+//        login.sendKeys(login.passwordLoginButton(),password);
+//        login.click(login.loginButton());
+//
+//    }
+//
 //    @And("user hover on Supermarket and click on bakery")
 //    public void hoverSupermarketClickBakery(){
 //        Actions actions=new Actions(driver);
@@ -58,5 +54,4 @@ public class D02_LoginStepDef {
 //        System.out.println("The expected is"+expected +
 //                "and the actual is:"+actual);
 //    }
-
 }
