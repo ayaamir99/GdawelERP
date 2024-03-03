@@ -16,8 +16,8 @@ public class P02_LoginPage extends BasePage{
         super(driver);
     }
     public WebElement EmailLoginButton(){
-        By passwordLoginButton=By.name("email");
-        return driver.findElement(passwordLoginButton);
+        By EmailLoginButton=By.name("email");
+        return driver.findElement(EmailLoginButton);
     }
     public WebElement passwordLoginButton(){
         By passwordLoginButton=By.name("password");

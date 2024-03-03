@@ -21,24 +21,34 @@ public class Hooks {
 //                + File.separator + "main" + File.separator
 //                + "resources" + File.separator + "chromedriver.exe";
 //        String browser=System.getProperty("user.dir")+"/src/main/resources/chromedriver.exe";
-//        System.setProperty("webdriver.chrome.driver",browser);
-//        driver=new ChromeDriver();
+        /***********************************************************/
+//        System.setProperty("webdriver.chrome.driver","/home/hash-pc-8/Downloads/chromedriver-linux64(1)/chromedriver-linux64/chromedriver");
+//        WebDriver  driver=new ChromeDriver();
+        /*********************************************************/
+//        String firfox=System.getProperty("user.dir")+"/src/main/resources/geckodriver";
+//        System.setProperty("webdriver.gecko.driver",firfox);
+        System.setProperty("webdriver.gecko.driver","/home/hash-pc-8/Downloads/geckodriver-v0.34.0-linux32/geckodriver");
+////        driver=new EdgeDriver();
+//        //Creating an object of EdgeDriver
+       WebDriver  driver = new FirefoxDriver();
+        driver.manage().window().maximize();
 
-//        String edge=System.getProperty("user.dir")+"/src/main/resources/msedgedriver.exe";
-//        System.setProperty("webdriver.edge.driver",edge);
-//        driver=new EdgeDriver();
-
-        WebDriverManager.firefoxdriver().setup();
-        driver=new FirefoxDriver();
-        driver.get("https://www.jumia.com.eg/");
+        //Deleting all the cookies
+        driver.manage().deleteAllCookies();
+        //Specifiying pageLoadTimeout and Implicit wait
+        driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+//        WebDriverManager.firefoxdriver().setup();
+//        driver=new FirefoxDriver();
+        driver.get("https://gdawel.app/");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(7));
         driver.manage().window().maximize();
         java.util.logging.Logger.getLogger("org.openqa.selenium").setLevel(Level.OFF);
 
     }
 
-    @After
-    public static void quit_browser(){
-        driver.quit();
-    }
+//    @After
+//    public static void quit_browser(){
+//        driver.quit();
+//    }
 }
