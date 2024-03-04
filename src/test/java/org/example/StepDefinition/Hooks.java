@@ -23,14 +23,20 @@ public class Hooks {
 //        String browser=System.getProperty("user.dir")+"/src/main/resources/chromedriver.exe";
         /***********************************************************/
 //        System.setProperty("webdriver.chrome.driver","/home/hash-pc-8/Downloads/chromedriver-linux64(1)/chromedriver-linux64/chromedriver");
-//        WebDriver  driver=new ChromeDriver();
+        /***********************************************/
+//       System.setProperty("webdriver.chrome.driver","/home/hash-pc-8/IdeaProjects/GdawelUnits/src/main/resources/chromedriver");
+                // /home/hash-pc-8/Downloads/chromedriver
+        System.setProperty("webdriver.chrome.driver","/home/hash-pc-8/Downloads/chromedriver");
+
+
+        WebDriver  driver=new ChromeDriver();
         /*********************************************************/
 //        String firfox=System.getProperty("user.dir")+"/src/main/resources/geckodriver";
 //        System.setProperty("webdriver.gecko.driver",firfox);
-        System.setProperty("webdriver.gecko.driver","/home/hash-pc-8/Downloads/geckodriver-v0.34.0-linux32/geckodriver");
-////        driver=new EdgeDriver();
-//        //Creating an object of EdgeDriver
-       WebDriver  driver = new FirefoxDriver();
+//        System.setProperty("webdriver.gecko.driver","/home/hash-pc-8/Downloads/geckodriver-v0.34.0-linux32/geckodriver");
+//////        driver=new EdgeDriver();
+////        //Creating an object of EdgeDriver
+//       WebDriver  driver = new FirefoxDriver();
         driver.manage().window().maximize();
 
         //Deleting all the cookies
