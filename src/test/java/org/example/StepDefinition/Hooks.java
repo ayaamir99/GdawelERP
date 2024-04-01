@@ -5,6 +5,7 @@ import io.cucumber.java.Before;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
@@ -26,10 +27,17 @@ public class Hooks {
         /***********************************************/
 //       System.setProperty("webdriver.chrome.driver","/home/hash-pc-8/IdeaProjects/GdawelUnits/src/main/resources/chromedriver");
                 // /home/hash-pc-8/Downloads/chromedriver
-        System.setProperty("webdriver.chrome.driver","/home/hash-pc-8/Downloads/chromedriver");
+        System.setProperty("webdriver.chrome.driver","/home/hash-pc-8/IdeaProjects/GdawelErpUnits/src/main/resources/Reports/chromedriver");
+        ChromeOptions options = new ChromeOptions();
+// options.setExperimentalOption("w3c", true);
+// options.addArguments("--remote-allow-origins=*");
+        options.addArguments("start-maximized");
+        options.setCapability("browserVersion", "115.0.5790.102");
+        options.addArguments("--remote-allow-origins=*");
 
+        WebDriver driver = new ChromeDriver(options);
 
-        WebDriver  driver=new ChromeDriver();
+        //WebDriver  driver=new ChromeDriver();
         /*********************************************************/
 //        String firfox=System.getProperty("user.dir")+"/src/main/resources/geckodriver";
 //        System.setProperty("webdriver.gecko.driver",firfox);

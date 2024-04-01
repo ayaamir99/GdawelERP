@@ -34,8 +34,8 @@ public class P04_PurchasesPage extends BasePage{
                 click(addToCartButton);
                 SoftAssert softAssert=new SoftAssert();
                 softAssert.assertTrue(successfullyAddedMessage().isDisplayed());
-                WebElement closeMessageButton=driver.findElement(By.xpath("//button[@class=\"close\"]"));
-                click(closeMessageButton);
+//                WebElement closeMessageButton=driver.findElement(By.xpath("//button[@class=\"close\"]"));
+//                click(closeMessageButton);
                 try {
                     Thread.sleep(2000);
                 } catch (InterruptedException e) {
