@@ -15,6 +15,8 @@ public class P02_LoginPage extends BasePage{
     public P02_LoginPage() {
         super(driver);
     }
+    public final String username ="detebag627@elixirsd.com";
+    public final String password ="74108520";
     public WebElement EmailLoginButton(){
         By EmailLoginButton=By.name("email");
         return driver.findElement(EmailLoginButton);
